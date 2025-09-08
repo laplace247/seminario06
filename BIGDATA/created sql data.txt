@@ -1,0 +1,33 @@
+create table if not exists dev.department(
+deptcode int,
+deptname string,
+location string
+);
+
+
+insert into dev.department values (10, 'Values', 'Miami');
+insert into dev.department values (20, 'Software', 'Orlando');
+
+select * from dev.department
+
+
+create table dev.Clientes(
+  Idcliente int,
+  nombre string,
+  direccion string,
+  telefono string
+);
+
+select * from dev.Clientes;
+
+formas
+(esquema/db).(tabla) ---> automatico
+(tabla) ---> manual
+
+
+df = spark.read.format("csv").load("/Volumes/workspace/bronze/data")
+df.write.mode("overwrite").saveAsTable("bronze")
+
+
+df = spark.read.format("csv").option("header","true").load("/Volumes/workspace/bronze/data")
+df.write.saveAsTable("bronze")
