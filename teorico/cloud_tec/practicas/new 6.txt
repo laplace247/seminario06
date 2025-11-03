@@ -1,0 +1,39 @@
+porque no coincide los porcentajes
+
+efs-apellido-practica
+ebs-apellido-practica
+s3-apellido-practica
+
+para efs y ebs (norte de california)
+
+origen y destino en diferentes regiones
+-------------------------------------------------
+
+
+arn:aws:s3:::s3-flores-practica/*
+
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Statement1",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::s3-flores-practica/*"
+    }
+  ]
+}
+
+2 VERSIONES - PAG WEB
+https://s3-flores-practica.s3.us-east-1.amazonaws.com/index.html
+http://s3-flores-practica.s3-website-us-east-1.amazonaws.com
+
+s3-flores-storage-practica
+
+PDTA: PARA AWS
+
+s3-luisfvc-practica-destino

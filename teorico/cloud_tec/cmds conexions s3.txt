@@ -1,0 +1,35 @@
+//hacer conexion punto A
+df -k
+sudo mkdir -p /efs/wp-content
+cd /efs/wp-content/
+clear
+sudo dnf -y install amazon-efs-utils
+cd /etc
+sudo vi /etc/fstab
+cat /etc/fstab
+sudo mount /efs/wp-content
+df -k
+cd /efs/wp-content
+sudo touch demofs.txt
+ls
+cat demofs.txt
+-------------------
+//hacer conexion punto B
+df -k
+sudo dnf -y install amazon-efs-utils
+sudo mkdir -p /efs/wp-content
+sudo vi /etc/fstab
+sudo mount /efs/wp-content
+cd /efs/wp-content
+ls
+----------
+//verificar conexion entre ambos puntos (A y B)
+//En punto A
+sudo touch demo.txt
+ls
+//En punto B
+ls
+
+
+
+
